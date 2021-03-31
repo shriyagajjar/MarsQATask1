@@ -1,0 +1,62 @@
+﻿using MarsQA_1.Helpers;
+using MarsQA_1.SpecflowPages.Pages;
+using System;
+using TechTalk.SpecFlow;
+
+namespace MarsQA_1.Feature
+{
+    [Binding]
+    public class ShareSkillsSteps
+    {
+        [Given(@"User using the Chrome browser")]
+        public void GivenUserUsingTheChromeBrowser()
+        {
+            
+        }
+        
+        [Given(@"User clicks on the Share Skill button")]
+        public void GivenUserClicksOnTheShareSkillButton()
+        {
+            ShareSkills shareskillobject = new ShareSkills();
+            shareskillobject.ShareSkillbtn();
+        }
+        
+        [When(@"Useris  navigates to ""(.*)"" url")]
+        public void WhenUserisNavigatesToUrl(string url)
+        {
+            driver.Navigate().GoToUrl(url);
+        }
+        
+        [When(@"User is enter the valid login credentials ""(.*)"" and ""(.*)""")]
+        public void WhenUserIsEnterTheValidLoginCredentialsAnd(string username, string password)
+        {
+           
+        }
+        
+        [When(@"User enter the details (.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*) and (.*)")]
+        public void WhenUserEnterTheDetailsAnd(string Title, string Description, string Category, string Subcategory, string Tags, string ServiceType, string LocationType, string SkillTrade, string SkillExchange, string WorkSamples, string Active)
+        {
+            ShareSkills shareskillobject = new ShareSkills();
+            shareskillobject.ShareskillDetails(Title,Description,Category,Subcategory,Tags,ServiceType,LocationType,SkillTrade,SkillExchange,WorkSamples,Active);
+        }
+        
+        [When(@"User entere Available Days")]
+        public void WhenUserEntereAvailableDays()
+        {
+            ShareSkills shareskillobject = new ShareSkills();
+            shareskillobject.Startdate();
+        }
+        
+        [Then(@"User able to log in to the application")]
+        public void ThenUserAbleToLogInToTheApplication()
+        {
+        }
+        
+        [Then(@"that Skills should be added to the Manage Listing page")]
+        public void ThenThatSkillsShouldBeAddedToTheManageListingPage()
+        {
+            ShareSkills shareskillobject = new ShareSkills();
+            shareskillobject.submit();
+        }
+    }
+}
