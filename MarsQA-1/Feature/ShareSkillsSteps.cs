@@ -1,6 +1,7 @@
 ﻿using MarsQA_1.Helpers;
 using MarsQA_1.SpecflowPages.Pages;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace MarsQA_1.Feature
@@ -17,6 +18,7 @@ namespace MarsQA_1.Feature
         [Given(@"User clicks on the Share Skill button")]
         public void GivenUserClicksOnTheShareSkillButton()
         {
+            Thread.Sleep(5000);
             ShareSkills shareskillobject = new ShareSkills();
             shareskillobject.ShareSkillbtn();
         }
@@ -24,7 +26,7 @@ namespace MarsQA_1.Feature
         [When(@"Useris  navigates to ""(.*)"" url")]
         public void WhenUserisNavigatesToUrl(string url)
         {
-            driver.Navigate().GoToUrl(url);
+           // driver.Navigate().GoToUrl(url);
         }
         
         [When(@"User is enter the valid login credentials ""(.*)"" and ""(.*)""")]

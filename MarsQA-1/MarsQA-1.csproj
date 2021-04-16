@@ -150,13 +150,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Feature\Login.cs" />
-    <Compile Include="Feature\ProfileSteps.cs" />
     <Compile Include="Feature\ShareSkillsSteps.cs" />
     <Compile Include="SpecflowPages\Helpers\CommonMethods.cs" />
     <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
     <Compile Include="SpecflowPages\Helpers\Driver.cs" />
     <Compile Include="SpecflowPages\Helpers\ExcelLibHelper.cs" />
-    <Compile Include="SpecflowPages\Pages\Profile.cs" />
     <Compile Include="SpecflowPages\Pages\ShareSkills.cs" />
     <Compile Include="SpecflowPages\Pages\SignIn.cs" />
     <Compile Include="SpecflowPages\Utils\Start.cs" />
@@ -165,7 +163,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Feature\Login.feature" />
-    <None Include="Feature\Profile.feature" />
     <None Include="Feature\ShareSkills.feature" />
     <None Include="SpecflowTests\Data\Data.xlsx" />
     <None Include="packages.config" />

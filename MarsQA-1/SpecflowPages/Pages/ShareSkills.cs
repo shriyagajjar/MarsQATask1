@@ -12,7 +12,7 @@ namespace MarsQA_1.SpecflowPages.Pages
          public IWebDriver WebDriver { get; }
        
 
-        public IWebElement clkShareSkillbtn => WebDriver.FindElement(By.XPath("//a[contains(text(),'Share Skill')]"));
+        public IWebElement shareSkillbtn => WebDriver.FindElement(By.XPath("//a[@href='/Home/ServiceListing')]"));
         public IWebElement titletxtbox => WebDriver.FindElement(By.XPath("//*[@name='title']"));
         public IWebElement desctxtbox => WebDriver.FindElement(By.XPath("//*[@name='description']"));
         public IWebElement clkdrpdwn => WebDriver.FindElement(By.XPath("//*[@name='categoryId']"));
@@ -26,7 +26,7 @@ namespace MarsQA_1.SpecflowPages.Pages
         public IWebElement active => WebDriver.FindElement(By.XPath("//*[@class='ui form']/div[10]/div[2]/div/div[1]/div/input"));
         public IWebElement clkSave => WebDriver.FindElement(By.XPath("//*[@class='ui teal button']"));
 
-        public void ShareSkillbtn() => clkShareSkillbtn.Click();
+        public void ShareSkillbtn() => shareSkillbtn.Click();
         public void Startdate() => startdate.Click();
 
         public void ShareskillDetails(string Title, string Description, string Category, string Subcategory, string Tags, string ServiceType, string LocationType, string SkillTrade, string SkillExchange, string WorkSamples, string Active)
